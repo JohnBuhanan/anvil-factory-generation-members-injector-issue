@@ -9,3 +9,7 @@ dependencies {
   implementation libs.kotlin.stdlib
   implementation libs.androidx.appcompat
 }
+
+anvil {
+  generateDaggerFactories = true // default is false
+}

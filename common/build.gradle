@@ -10,3 +10,7 @@ dependencies {
   implementation libs.androidx.corektx
   implementation libs.androidx.appcompat
 }
+
+anvil {
+  generateDaggerFactories = true // default is false
+}

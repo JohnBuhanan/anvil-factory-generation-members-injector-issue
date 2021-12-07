@@ -1,4 +1,4 @@
 package com.example.android.daggerwork.common.dagger
 
-class Dependency1 {
+class B2 {
 }

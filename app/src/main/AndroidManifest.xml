@@ -6,7 +6,7 @@
         android:name=".App"
         android:theme="@style/Theme.AppCompat">
 
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.example.android.daggerwork.feature.ui.FeatureActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

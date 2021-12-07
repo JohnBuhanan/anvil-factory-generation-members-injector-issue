@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name="com.example.android.daggerwork.feature.ui.ChatActivity"
+            android:name="com.example.android.daggerwork.feature.ui.FeatureActivity2"
             android:screenOrientation="portrait" />
     </application>
 </manifest>
