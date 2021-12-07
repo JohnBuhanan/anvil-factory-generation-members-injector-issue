@@ -1,0 +1,17 @@
+plugins {
+  id 'com.android.application'
+  id 'org.jetbrains.kotlin.android'
+  id 'org.jetbrains.kotlin.kapt'
+  id 'com.squareup.anvil'
+}
+
+dependencies {
+  implementation project(':feature')
+
+  implementation libs.kotlin.stdlib
+  implementation libs.androidx.corektx
+  implementation libs.androidx.appcompat
+  implementation libs.androidx.constraintlayout
+  implementation libs.kotlin.coroutines.core
+  implementation libs.kotlin.coroutines.android
+}
