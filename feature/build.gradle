@@ -4,6 +4,9 @@ plugins {
 }
 
 dependencies {
+  anvil(libs.tangle.compiler)
+  implementation libs.tangle.api
+
   api project(':common')
   implementation libs.dagger.lib
   implementation libs.kotlin.stdlib

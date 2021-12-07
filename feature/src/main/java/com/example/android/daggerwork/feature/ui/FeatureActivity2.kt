@@ -3,6 +3,7 @@ package com.example.android.daggerwork.feature.ui
 import android.os.Bundle
 import android.os.PersistableBundle
 import com.example.android.daggerwork.feature.dagger.F2
+import tangle.inject.TangleGraph
 import javax.inject.Inject
 
 class FeatureActivity2 : FeatureActivity1() {
@@ -11,6 +12,6 @@ class FeatureActivity2 : FeatureActivity1() {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-
+        TangleGraph.inject(this)
     }
 }
