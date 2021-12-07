@@ -1,8 +1,0 @@
-plugins {
-  id 'example.gradle.androidlib'
-}
-
-dependencies {
-  implementation project(':feature:no_internet')
-  implementation libs.androidx.test.espresso.core
-}
