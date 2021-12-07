@@ -6,8 +6,7 @@ rootProject.name = "DaggerWork"
 
 enableFeaturePreview('VERSION_CATALOGS')
 
-include ':app',
-    ':domain',
+include ':domain',
     ':common:dagger-support',
     ':common:dagger-viewmodel-support',
     ':common:feature-runner-support',
@@ -16,12 +15,6 @@ include ':app',
     ':common:resources-compose',
     ':common:router',
     ':common:routes',
-    ':feature:no_internet',
-    ':feature:no_internet:no_internet_test_support',
-    ':feature:no_internet:no_internet_feature_runner',
     ':feature:chat',
     ':feature:chat:chat_test_support',
-    ':feature:chat:chat_feature_runner',
-    ':feature:login',
-    ':feature:login:login_feature_runner',
-    ':feature:login:login_test_support'
+    ':feature:chat:chat_feature_runner'
