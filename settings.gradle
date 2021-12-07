@@ -6,15 +6,7 @@ rootProject.name = "DaggerWork"
 
 enableFeaturePreview('VERSION_CATALOGS')
 
-include ':domain',
-    ':common:dagger-support',
-    ':common:dagger-viewmodel-support',
-    ':common:feature-runner-support',
-    ':common:feature-runner-test-support',
-    ':common:resources',
-    ':common:resources-compose',
-    ':common:router',
-    ':common:routes',
-    ':feature:chat',
-    ':feature:chat:chat_test_support',
-    ':feature:chat:chat_feature_runner'
+include ':app',
+    ':common',
+    ':feature'
+
