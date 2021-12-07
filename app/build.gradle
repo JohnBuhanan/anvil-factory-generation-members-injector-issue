@@ -5,8 +5,27 @@ plugins {
   id 'com.squareup.anvil'
 }
 
+android {
+  compileSdkVersion 30
+
+  defaultConfig {
+    minSdkVersion 24
+    targetSdkVersion 30
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
 dependencies {
   implementation project(':feature')
+
+//  implementation deps.dagger2.dagger
+//  kapt deps.dagger2.compiler
+  implementation libs.dagger.lib
+  kapt libs.dagger.compiler
 
   implementation libs.kotlin.stdlib
   implementation libs.androidx.corektx

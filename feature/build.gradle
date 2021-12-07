@@ -5,20 +5,7 @@ plugins {
 
 dependencies {
   api project(':common')
-
+  implementation libs.dagger.lib
   implementation libs.kotlin.stdlib
-  implementation libs.androidx.corektx
   implementation libs.androidx.appcompat
-  implementation libs.androidx.constraintlayout
-  implementation libs.androidx.recyclerview
-  implementation libs.androidx.lifecycle.runtime
-  implementation libs.kotlin.coroutines.core
-  implementation libs.kotlin.coroutines.android
-
-  testImplementation libs.junit4
-  testImplementation libs.kotlin.coroutines.test
-
-  androidTestImplementation libs.androidx.test.junit
-  androidTestImplementation libs.androidx.test.corektx
-  androidTestImplementation libs.androidx.test.espresso.core
 }

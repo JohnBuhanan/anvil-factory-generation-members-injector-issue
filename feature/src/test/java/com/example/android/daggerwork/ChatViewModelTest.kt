@@ -1,16 +1,14 @@
 package com.example.android.daggerwork
 
-import com.example.android.daggerwork.chat.ChatViewModel
-import com.example.android.daggerwork.chat.ChatViewModelImpl
-import com.example.android.daggerwork.chat.Loading
-import com.example.android.daggerwork.chat.ShowingChatData
+import com.example.android.daggerwork.feature.ChatViewModel
+import com.example.android.daggerwork.feature.ChatViewModelImpl
+import com.example.android.daggerwork.feature.Loading
+import com.example.android.daggerwork.feature.ShowingChatData
 import com.example.android.daggerwork.domain.models.Message.IncomingMessage
 import com.example.android.daggerwork.domain.models.Message.OutgoingMessage
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.take
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.TestCoroutineScope

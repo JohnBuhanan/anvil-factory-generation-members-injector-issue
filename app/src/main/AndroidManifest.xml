@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.daggerwork.chat.runner">
+    package="com.example.android.daggerwork.app">
 
     <application
-        android:name="com.example.android.daggerwork.chat.runner.ChatRunnerApp"
-        android:theme="@style/Theme.DaggerWork">
+        android:name=".App"
+        android:theme="@style/Theme.AppCompat">
 
-        <activity android:name="com.example.android.daggerwork.chat.runner.ChatRunnerActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
