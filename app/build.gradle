@@ -20,17 +20,15 @@ android {
 }
 
 dependencies {
-  implementation project(':feature')
-
-//  implementation deps.dagger2.dagger
-//  kapt deps.dagger2.compiler
-  implementation libs.dagger.lib
   kapt libs.dagger.compiler
 
-  implementation libs.kotlin.stdlib
+  implementation project(':feature')
+
   implementation libs.androidx.corektx
   implementation libs.androidx.appcompat
   implementation libs.androidx.constraintlayout
+  implementation libs.dagger.lib
   implementation libs.kotlin.coroutines.core
   implementation libs.kotlin.coroutines.android
+  implementation libs.kotlin.stdlib
 }
