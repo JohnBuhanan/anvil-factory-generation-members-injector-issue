@@ -1,0 +1,92 @@
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+  id 'example.gradle.dagger'
+}
+
+android {
+  compileSdkVersion 30
+
+  defaultConfig {
+    applicationId "com.example.android.daggerwork"
+    minSdkVersion 23
+    targetSdkVersion 30
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "com.example.android.daggerwork.testrunner.AppAndroidJunitRunner"
+    testInstrumentationRunnerArguments clearPackageData: 'true'
+
+    testOptions {
+      execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+  }
+
+  buildTypes {
+
+    debug {
+      minifyEnabled false
+      debuggable true
+    }
+
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  packagingOptions {
+    exclude 'META-INF/AL2.0'
+    exclude 'META-INF/LGPL2.1'
+  }
+  buildFeatures {
+    compose true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion libs.versions.compose.get()
+  }
+}
+
+dependencies {
+
+  api project(':feature:chat')
+  implementation project(':feature:login')
+  implementation project(':feature:no_internet')
+  implementation project(':domain')
+  implementation project(':common:dagger-support')
+  implementation project(':common:resources')
+  implementation project(':common:router')
+  implementation project(':common:dagger-viewmodel-support')
+
+  implementation libs.kotlin.stdlib
+  implementation libs.androidx.corektx
+  implementation libs.androidx.appcompat
+  implementation libs.androidx.constraintlayout
+  implementation libs.material
+
+  implementation libs.kotlin.coroutines.core
+  implementation libs.kotlin.coroutines.android
+
+  testImplementation libs.junit4
+  implementation libs.kotlin.coroutines.test
+
+  implementation libs.bundles.compose
+
+  androidTestImplementation libs.androidx.test.runner
+  androidTestUtil libs.androidx.test.orchestrator
+
+  androidTestImplementation project(':feature:no_internet:no_internet_test_support')
+  androidTestImplementation project(':feature:chat:chat_test_support')
+  androidTestImplementation project(':feature:login:login_test_support')
+
+  androidTestImplementation libs.androidx.test.junit
+  androidTestImplementation libs.androidx.test.corektx
+  androidTestImplementation libs.androidx.test.espresso.core
+  androidTestImplementation libs.androidx.compose.test.junit4
+}

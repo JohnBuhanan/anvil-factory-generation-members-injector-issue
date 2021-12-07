@@ -1,0 +1,24 @@
+plugins {
+  id 'example.gradle.androidlib'
+  id 'example.gradle.dagger'
+}
+
+android {
+  defaultConfig {
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+}
+
+dependencies {
+  api project(':common:routes')
+  api project(':common:dagger-support')
+  implementation libs.kotlin.stdlib
+  implementation libs.androidx.corektx
+  implementation libs.androidx.appcompat
+
+  androidTestImplementation libs.assertk
+  androidTestImplementation libs.androidx.test.junit
+  androidTestImplementation libs.androidx.test.corektx
+  androidTestImplementation libs.androidx.test.espresso.core
+  androidTestImplementation libs.androidx.compose.test.junit4
+}

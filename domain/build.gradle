@@ -1,0 +1,29 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinCompile
+
+plugins {
+  id 'kotlin'
+  id 'example.gradle.dagger'
+}
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+  implementation libs.kotlin.stdlib
+  implementation libs.kotlin.coroutines.core
+
+  api libs.store
+
+  implementation project(':common:dagger-support')
+  implementation project(':common:routes')
+}
+
+tasks.withType(KotlinCompile).configureEach {
+  kotlinOptions {
+    freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+    freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.FlowPreview"
+    freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
+  }
+}

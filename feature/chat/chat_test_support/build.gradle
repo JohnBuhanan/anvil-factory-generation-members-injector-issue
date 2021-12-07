@@ -1,0 +1,8 @@
+plugins {
+  id 'example.gradle.androidlib'
+}
+
+dependencies {
+  implementation project(':feature:chat')
+  implementation libs.androidx.test.espresso.core
+}

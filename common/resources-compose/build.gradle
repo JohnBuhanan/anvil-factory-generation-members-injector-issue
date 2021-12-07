@@ -1,0 +1,17 @@
+plugins {
+  id 'example.gradle.androidlib'
+}
+
+android {
+  buildFeatures {
+    compose true
+  }
+
+  composeOptions {
+    kotlinCompilerExtensionVersion libs.versions.compose.get()
+  }
+}
+
+dependencies {
+  implementation libs.bundles.compose
+}

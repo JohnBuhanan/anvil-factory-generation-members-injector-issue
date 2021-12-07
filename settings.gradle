@@ -1,0 +1,27 @@
+plugins {
+  id("com.gradle.enterprise") version "3.6.3"
+}
+
+rootProject.name = "DaggerWork"
+
+enableFeaturePreview('VERSION_CATALOGS')
+
+include ':app',
+    ':domain',
+    ':common:dagger-support',
+    ':common:dagger-viewmodel-support',
+    ':common:feature-runner-support',
+    ':common:feature-runner-test-support',
+    ':common:resources',
+    ':common:resources-compose',
+    ':common:router',
+    ':common:routes',
+    ':feature:no_internet',
+    ':feature:no_internet:no_internet_test_support',
+    ':feature:no_internet:no_internet_feature_runner',
+    ':feature:chat',
+    ':feature:chat:chat_test_support',
+    ':feature:chat:chat_feature_runner',
+    ':feature:login',
+    ':feature:login:login_feature_runner',
+    ':feature:login:login_test_support'

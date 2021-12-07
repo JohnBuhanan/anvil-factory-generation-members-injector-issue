@@ -1,0 +1,37 @@
+plugins {
+  id 'example.gradle.androidlib'
+  id 'example.gradle.dagger'
+}
+
+android {
+  buildFeatures {
+    compose true
+  }
+
+  composeOptions {
+    kotlinCompilerExtensionVersion libs.versions.compose.get()
+  }
+}
+
+dependencies {
+  api project(':common:routes')
+  api project(':common:dagger-viewmodel-support')
+  implementation project(":domain")
+  implementation project(":common:resources-compose")
+  implementation project(":common:router")
+
+  implementation libs.kotlin.stdlib
+  implementation libs.androidx.corektx
+  implementation libs.androidx.appcompat
+  implementation libs.kotlin.coroutines.core
+  implementation libs.kotlin.coroutines.android
+  implementation libs.androidx.lifecycle.viewmodel
+  implementation libs.androidx.lifecycle.runtime
+
+  implementation libs.bundles.compose
+
+  testImplementation libs.junit4
+  testImplementation libs.assertk
+  testImplementation libs.kotlin.coroutines.test
+  testImplementation libs.turbine
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.daggerwork.login.runner">
+
+    <application
+        android:name="com.example.android.daggerwork.login.runner.LoginRunnerApp"
+        android:allowBackup="false"
+        android:theme="@style/Theme.DaggerWork">
+
+        <activity
+            android:name="com.example.android.daggerwork.login.runner.LoginRunnerActivity"
+            android:label="Login Feature Runner">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

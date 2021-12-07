@@ -1,0 +1,8 @@
+plugins {
+  id 'example.gradle.androidlib'
+}
+
+dependencies {
+  implementation libs.androidx.appcompat
+  implementation libs.material
+}
