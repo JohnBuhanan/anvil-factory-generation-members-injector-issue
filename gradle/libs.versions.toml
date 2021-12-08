@@ -33,7 +33,7 @@ androidx-compose-lifecycleviewmodel = "androidx.lifecycle:lifecycle-viewmodel-co
 androidx-compose-runtime-rxjava2 = { module = "androidx.compose.runtime:runtime-rxjava2", version.ref = "compose" }
 androidx-compose-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
-anvil = "com.squareup.anvil:gradle-plugin:2.3.10"
+anvil = "com.squareup.anvil:gradle-plugin:2.3.11-SNAPSHOT"
 
 tangle-compiler = { module = "com.rickbusarow.tangle:tangle-compiler", version.ref = "tangle" }
 tangle-api = { module = "com.rickbusarow.tangle:tangle-api", version.ref = "tangle" }

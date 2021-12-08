@@ -5,6 +5,7 @@ plugins {
 repositories {
     google()
     mavenCentral()
+    maven(uri("https://oss.sonatype.org/content/repositories/snapshots/"))
 }
 
 dependencies {
